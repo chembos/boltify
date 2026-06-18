@@ -1,0 +1,14 @@
+{
+  "name": "boltify-website",
+  "version": "1.0.0",
+  "description": "Boltify - Airport transfer service for Erasmus students",
+  "type": "module",
+  "scripts": {
+    "dev": "http-server -p 3000 -c-1 --gzip",
+    "build": "echo 'Static site - no build needed'",
+    "start": "http-server -p 3000 -c-1 --gzip"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
