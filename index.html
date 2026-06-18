@@ -280,6 +280,7 @@
       color:var(--blue);
     }
     .direction-option.active b{background:var(--orange);color:#fff}
+  .direction-option b svg{width:16px;height:16px}
     .form-divider{
       height:1px;
       background:var(--line);
@@ -483,6 +484,7 @@
     .step{padding:28px;position:relative;overflow:hidden}
     .step::before{content:attr(data-step);position:absolute;right:18px;top:10px;color:rgba(255,90,22,.15);font-size:78px;font-weight:950;letter-spacing:0}
     .step-icon,.benefit-icon{width:52px;height:52px;border-radius:var(--radius);display:grid;place-items:center;background:var(--orange);color:#fff;font-weight:950;font-size:22px;margin-bottom:22px}
+  .benefit-icon svg{width:26px;height:26px}
     .step h3,.benefit h3,.faq-question{font-size:23px;letter-spacing:0}
     .step h3,.benefit h3{margin-bottom:10px}
     .step p,.benefit p,.faq-item p,.quote p{color:var(--muted);font-weight:650;line-height:1.55}
@@ -802,6 +804,19 @@
       100%{box-shadow:0 14px 30px rgba(255,90,22,.25),0 0 0 0 rgba(255,90,22,0)}
     }
 
+    /* Animated metric strip */
+    .metric-strip{
+      margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+    }
+    .metric{
+      text-align:center;padding:22px 14px;border-radius:var(--radius);
+      background:rgba(255,255,255,.7);border:1px solid rgba(16,23,34,.08);
+      box-shadow:0 12px 28px rgba(16,23,34,.06);
+    }
+    .metric b{display:block;font-size:38px;line-height:1;color:var(--orange);letter-spacing:-.5px;font-weight:950}
+    .metric span{display:block;margin-top:8px;color:#53606d;font-size:13.5px;font-weight:800;line-height:1.3}
+    @media(max-width:760px){.metric-strip{grid-template-columns:repeat(2,1fr)}.metric b{font-size:32px}}
+
     /* Floating decorative orbs behind the hero (subtle depth) */
     .hero-orb{
       position:absolute;border-radius:50%;z-index:0;pointer-events:none;
@@ -1009,11 +1024,11 @@
               <div class="step-kicker"><span>2. ¿Qué necesitas?</span><small>Ida o vuelta</small></div>
               <div class="direction-choice" role="group" aria-label="Dirección del traslado">
                 <button class="direction-option" data-direction="airport-to-murcia" type="button">
-                  <b>↓</b>
+                  <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg></b>
                   <span>Llego al aeropuerto y voy a Murcia</span>
                 </button>
                 <button class="direction-option" data-direction="murcia-to-airport" type="button">
-                  <b>↑</b>
+                  <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V9"/><path d="M7 13l5-5 5 5"/><path d="M5 4h14"/></svg></b>
                   <span>Salgo desde Murcia al aeropuerto</span>
                 </button>
               </div>
@@ -1163,9 +1178,19 @@
         </div>
         <div class="story-route" aria-hidden="true">
           <svg viewBox="0 0 760 70" role="presentation">
-            <path class="story-path" d="M 40 50 C 200 8, 280 8, 380 35 C 480 62, 560 62, 720 22"
+            <path id="storyCarPath" class="story-path" d="M 40 50 C 200 8, 280 8, 380 35 C 480 62, 560 62, 720 22"
               fill="none" stroke="#ff5a16" stroke-width="3" stroke-linecap="round" pathLength="1"
               stroke-dasharray="6 9" />
+            <g id="storyCar" opacity="0">
+              <g transform="translate(-17 -10)">
+                <rect x="2" y="6" width="30" height="14" rx="4" fill="#ff5a16"/>
+                <path d="M8 6 L13 0 H23 L28 6 Z" fill="#147fd1"/>
+                <circle cx="9" cy="20" r="3.4" fill="#101722"/>
+                <circle cx="25" cy="20" r="3.4" fill="#101722"/>
+                <circle cx="9" cy="20" r="1.4" fill="#fff"/>
+                <circle cx="25" cy="20" r="1.4" fill="#fff"/>
+              </g>
+            </g>
             <g>
               <circle class="story-dot d1" cx="40" cy="50" r="9" fill="#147fd1" />
               <text x="40" y="54" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">1</text>
@@ -1197,6 +1222,13 @@
             <p>El conductor revisa disponibilidad, confirma el precio final y te indica cómo dejar la reserva preparada.</p>
           </article>
         </div>
+
+        <div class="metric-strip reveal" aria-label="Datos clave de Boltify">
+          <div class="metric"><b class="count" data-to="3" data-suffix="">0</b><span>Aeropuertos conectados<br>ALC · RMU · VLC</span></div>
+          <div class="metric"><b class="count" data-to="4" data-suffix="">0</b><span>Plazas por coche para compartir el traslado</span></div>
+          <div class="metric"><b class="count" data-to="5" data-decimals="1" data-suffix="★">0</b><span>Reseñas reales en Google Maps</span></div>
+          <div class="metric"><b class="count" data-to="24" data-suffix="/7">0</b><span>Atención directa por WhatsApp</span></div>
+        </div>
       </div>
     </section>
 
@@ -1209,32 +1241,32 @@
         </div>
         <div class="benefit-grid">
           <article class="benefit featured reveal">
-            <div class="benefit-icon">€</div>
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 14.6c2.7-.4 5 1.3 5 4.4"/></svg></div>
             <h3>Te ayudamos a encontrar con quién compartir</h3>
             <p>Si sois menos de 4, con tu permiso intentamos avisar en grupos Erasmus de que hay plazas disponibles para que el viaje pueda salir más económico.</p>
           </article>
           <article class="benefit reveal">
-            <div class="benefit-icon">⌂</div>
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10.5V19h12v-8.5"/><path d="M10 19v-4.5h4V19"/></svg></div>
             <h3>Olvídate de cruzar Murcia con maletas</h3>
             <p>Te recogemos o te dejamos en la puerta. Sin caminar desde la estación hasta el piso cargando equipaje.</p>
           </article>
           <article class="benefit reveal">
-            <div class="benefit-icon">↗</div>
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13.5h14"/><path d="M6.5 13.5 5 8.5a2 2 0 0 1 1.9-2.5h10.2A2 2 0 0 1 19 8.5l-1.5 5"/><path d="M5 13.5V18M19 13.5V18"/><circle cx="8" cy="16" r="1.3"/><circle cx="16" cy="16" r="1.3"/></svg></div>
             <h3>Más directo que el autobús</h3>
             <p>Vas entre Murcia y el aeropuerto sin cargar maletas, sin transbordos y sin depender de horarios que quizá no encajan con tu vuelo.</p>
           </article>
           <article class="benefit reveal">
-            <div class="benefit-icon">€</div>
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path d="M15 9.2a3.6 3.6 0 0 0-3-1.4c-2.2 0-3.6 1.9-3.6 4.2s1.4 4.2 3.6 4.2a3.6 3.6 0 0 0 3-1.4"/><path d="M7.6 11.2h4.2M7.6 13.2h3.4"/></svg></div>
             <h3>Puede salir más económico que un taxi</h3>
             <p>Especialmente si compartís plazas. Ves una estimación antes de escribir y puedes pedir que intentemos completar el coche.</p>
           </article>
           <article class="benefit reveal">
-            <div class="benefit-icon">★</div>
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/></svg></div>
             <h3>Reseñas reales de cinco estrellas</h3>
             <p>Clientes que ya han usado Boltify para ir al aeropuerto han dejado valoraciones reales en Google Maps.</p>
           </article>
           <article class="benefit reveal">
-            <div class="benefit-icon">↺</div>
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 8a7 7 0 1 0 1.3 5"/><path d="M19.5 4v4h-4"/><path d="M12 8.5V12l2.4 1.6"/></svg></div>
             <h3>Flexibilidad si tu vuelo cambia</h3>
             <p>Si tu vuelo cambia o se retrasa, avisa por WhatsApp cuanto antes. El conductor te confirmará cómo reorganizar la recogida según la disponibilidad y la franja horaria.</p>
           </article>
@@ -1900,6 +1932,57 @@
         });
       }, {threshold:.4});
       storyObserver.observe(storyRoute);
+    }
+
+    /* ---- Animated count-up metrics ---- */
+    const counters = document.querySelectorAll(".count");
+    function animateCount(el){
+      const to = parseFloat(el.dataset.to || "0");
+      const decimals = parseInt(el.dataset.decimals || "0", 10);
+      const suffix = el.dataset.suffix || "";
+      if(prefersReducedMotion){ el.textContent = to.toFixed(decimals) + suffix; return; }
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (to * eased).toFixed(decimals) + suffix;
+        if(p < 1) requestAnimationFrame(tick);
+        else el.textContent = to.toFixed(decimals) + suffix;
+      }
+      requestAnimationFrame(tick);
+    }
+    if(counters.length){
+      const countObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){ animateCount(entry.target); countObserver.unobserve(entry.target); }
+        });
+      }, {threshold:.6});
+      counters.forEach(c => countObserver.observe(c));
+    }
+
+    /* ---- Story-route car advances with scroll ---- */
+    const carPath = document.getElementById("storyCarPath");
+    const storyCar = document.getElementById("storyCar");
+    if(carPath && storyCar && !prefersReducedMotion){
+      const pathLen = carPath.getTotalLength();
+      function updateStoryCar(){
+        const route = storyRoute;
+        if(!route) return;
+        const rect = route.getBoundingClientRect();
+        const vh = window.innerHeight;
+        // progress: from when section enters bottom until it reaches upper third
+        const raw = (vh - rect.top) / (vh * 0.85);
+        const progress = Math.max(0, Math.min(1, raw));
+        storyCar.setAttribute("opacity", progress > 0 && progress < 1 ? "1" : (progress >= 1 ? "1" : "0"));
+        const pt = carPath.getPointAtLength(pathLen * progress);
+        const ahead = carPath.getPointAtLength(Math.min(pathLen, pathLen * progress + 1));
+        const angle = Math.atan2(ahead.y - pt.y, ahead.x - pt.x) * 180 / Math.PI;
+        storyCar.setAttribute("transform", `translate(${pt.x} ${pt.y}) rotate(${angle})`);
+      }
+      window.addEventListener("scroll", () => requestAnimationFrame(updateStoryCar), {passive:true});
+      window.addEventListener("resize", () => requestAnimationFrame(updateStoryCar), {passive:true});
+      updateStoryCar();
     }
 
     /* ---- Hero scene parallax (pointer + scroll) ---- */
