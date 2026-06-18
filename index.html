@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transfer Aeropuerto Alicante Murcia para Erasmus | Boltify</title>
+  <meta name="description" content="Transfer puerta a puerta entre Murcia y los aeropuertos de Alicante, Murcia y Valencia. Ideal para Erasmus: calcula precio, comparte plazas y confirma por WhatsApp." />
+  <meta property="og:title" content="Transfer Aeropuerto Alicante Murcia para Erasmus | Boltify" />
+  <meta property="og:description" content="Transfer puerta a puerta entre Murcia y los aeropuertos de Alicante, Murcia y Valencia. Ideal para Erasmus: calcula precio, comparte plazas y confirma por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <!-- TODO: añadir imagen 1200x630 para vista previa en WhatsApp.
+       Ruta preparada cuando exista: <meta property="og:image" content="https://boltify.es/og-boltify.jpg" />
+       Contenido recomendado: Boltify · Transfer aeropuerto Alicante ⇄ Murcia · Para Erasmus · puerta a puerta · WhatsApp. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Boltify",
+      "telephone": "+34 667 596 794",
+      "url": "https://wa.me/34667596794",
+      "areaServed": [
+        {"@type": "Place", "name": "Murcia"},
+        {"@type": "Place", "name": "Aeropuerto de Alicante"},
+        {"@type": "Place", "name": "Aeropuerto Internacional Región de Murcia"},
+        {"@type": "Place", "name": "Aeropuerto de Valencia"}
+      ]
+    }
+  </script>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --surface:#ffffff;
+      --surface-2:#eef6ff;
+      --ink:#101722;
+      --muted:#5f6a77;
+      --line:rgba(16,23,34,.13);
+      --orange:#ff5a16;
+      --orange-dark:#df4307;
+      --blue:#147fd1;
+      --blue-soft:#e5f3ff;
+      --green:#12845b;
+      --yellow:#ffd05a;
+      --shadow:0 18px 50px rgba(16,23,34,.12);
+      --shadow-soft:0 12px 32px rgba(16,23,34,.08);
+      --radius:8px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(115deg, rgba(20,127,209,.10), transparent 34%),
+        linear-gradient(245deg, rgba(255,90,22,.07), transparent 30%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max), calc(100% - 40px));margin-inline:auto}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:30;
+      border-bottom:1px solid rgba(16,23,34,.08);
+      background:rgba(245,247,251,.88);
+      backdrop-filter:blur(16px);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:950;letter-spacing:0}
+    .brand-mark{
+      width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;
+      background:linear-gradient(135deg,var(--orange),#ff8a22);
+      box-shadow:0 12px 26px rgba(255,90,22,.28);
+    }
+    .brand small{display:block;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:0}
+    .nav-links{display:flex;align-items:center;gap:26px;color:#495563;font-weight:850;font-size:14px}
+    .nav-links a{transition:color .18s ease}
+    .nav-links a:hover{color:var(--orange-dark)}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      min-height:46px;padding:13px 18px;border-radius:var(--radius);border:1px solid transparent;
+      font-weight:950;letter-spacing:0;white-space:nowrap;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--orange);color:#fff;box-shadow:0 14px 30px rgba(255,90,22,.25)}
+    .btn-primary:hover{background:var(--orange-dark);box-shadow:0 18px 42px rgba(255,90,22,.33)}
+    .btn-secondary{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--shadow-soft)}
+    .btn-secondary:hover{border-color:rgba(20,127,209,.32)}
+    .btn-small{min-height:40px;padding:10px 14px;font-size:14px}
+
+    .hero{
+      position:relative;
+      min-height:calc(100svh - 72px);
+      display:flex;
+      align-items:flex-start;
+      padding:56px 0 64px;
+      overflow:hidden;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:90px;
+      background:linear-gradient(180deg, transparent, var(--bg));
+      pointer-events:none;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);
+      grid-template-areas:
+        "copy visual"
+        "support quote";
+      gap:22px 44px;
+      align-items:start;
+      position:relative;
+      z-index:1;
+    }
+    .hero-copy{grid-area:copy;align-self:start;padding-top:34px}
+    .hero-support{grid-area:support;align-self:start}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;
+      padding:9px 12px;border:1px solid rgba(255,90,22,.25);border-radius:999px;
+      background:rgba(255,255,255,.76);color:var(--orange-dark);font-weight:950;font-size:14px;
+    }
+    .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(18,132,91,.12)}
+    h1{font-size:clamp(46px,6.2vw,82px);line-height:1;letter-spacing:0;max-width:720px;font-weight:950}
+    .grad{background:linear-gradient(95deg,var(--blue),#36a5e8 35%,#f27b4b 68%,var(--orange));-webkit-background-clip:text;color:transparent}
+    .lead{margin-top:22px;color:var(--muted);font-size:clamp(17px,1.55vw,20px);line-height:1.72;font-weight:560;max-width:590px}
+    .italian-note{margin-top:12px;color:#344151;font-size:15px;font-weight:850;line-height:1.5;max-width:560px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;max-width:650px}
+    .trust-item{
+      min-height:76px;padding:12px;border:1px solid rgba(16,23,34,.09);border-radius:var(--radius);
+      background:rgba(255,255,255,.66);box-shadow:0 10px 24px rgba(16,23,34,.05);
+    }
+    .trust-item b{display:block;font-size:22px;color:var(--orange);letter-spacing:0}
+    .trust-item span{display:block;margin-top:4px;color:#53606d;font-size:13px;font-weight:800;line-height:1.25}
+
+    .booking-shell{
+      grid-area:visual;
+      position:relative;
+      display:block;
+      aspect-ratio:16/9;
+      min-height:0;
+      padding:0;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(16,23,34,.10);
+      background:
+        linear-gradient(180deg, #dff2ff 0%, #fff8ee 55%, #f3e6d6 100%);
+      isolation:isolate;
+    }
+    .scene-svg{
+      position:relative;
+      width:100%;
+      height:100%;
+      min-height:0;
+      z-index:1;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:inset 0 0 0 1px rgba(16,23,34,.08);
+    }
+    .booking-shell::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:0;
+      background:
+        linear-gradient(rgba(16,23,34,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16,23,34,.035) 1px, transparent 1px);
+      background-size:38px 38px;
+      mask-image:linear-gradient(180deg, black, transparent 92%);
+    }
+    .booking-shell::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 44%, rgba(16,23,34,.08));
+      pointer-events:none;
+    }
+    .route-dash{stroke-dasharray:12 14;animation:dashRoute 14s linear infinite}
+    .sun-glow{transform-box:fill-box;transform-origin:center;animation:sunGlow 4.8s ease-in-out infinite}
+    @keyframes sunGlow{50%{opacity:.64;transform:scale(.94)}}
+    @keyframes dashRoute{to{stroke-dashoffset:-420}}
+    .booking-panel{
+      grid-area:quote;
+      position:relative;
+      z-index:4;
+      display:grid;
+      gap:15px;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.96);
+      box-shadow:0 12px 32px rgba(16,23,34,.14);
+      color:#354252;
+    }
+    .booking-head{display:grid;gap:6px}
+    .booking-head .chip{margin-bottom:2px}
+    .booking-head h2{font-size:27px;line-height:1.12}
+    .booking-head p{color:var(--muted);font-size:14px;font-weight:640;line-height:1.55;max-width:640px}
+    .booking-step{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:34px;height:34px;
+      border-radius:var(--radius);
+      background:var(--orange);
+      color:#fff;
+      font-weight:950;
+      flex:0 0 auto;
+    }
+    .quote-flow{
+      display:grid;
+      gap:12px;
+    }
+    .quote-flow .wide{grid-column:1/-1}
+    .airport-choice{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:9px;
+    }
+    .airport-option,.direction-option{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      color:var(--ink);
+      text-align:left;
+      transition:transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .airport-option:hover,.direction-option:hover{transform:translateY(-1px);border-color:rgba(255,90,22,.32)}
+    .airport-option{
+      min-height:60px;
+      padding:10px 11px;
+      display:grid;
+      gap:4px;
+    }
+    .airport-option strong{font-size:20px;color:var(--orange)}
+    .airport-option span{font-size:12px;color:#5a6674;font-weight:800;line-height:1.25}
+    .airport-option.active,.direction-option.active{
+      border-color:rgba(255,90,22,.46);
+      background:#fff2e8;
+      box-shadow:0 10px 24px rgba(255,90,22,.12);
+    }
+    .direction-choice{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+    .direction-option{
+      min-height:56px;
+      padding:10px 11px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:13px;
+      font-weight:900;
+      line-height:1.25;
+    }
+    .direction-option b{
+      width:28px;height:28px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      background:var(--blue-soft);
+      color:var(--blue);
+    }
+    .direction-option.active b{background:var(--orange);color:#fff}
+    .form-divider{
+      height:1px;
+      background:var(--line);
+      margin:2px 0;
+    }
+    .quote-pricebar{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      padding:12px;
+      border-radius:var(--radius);
+      background:var(--ink);
+      color:#fff;
+      box-shadow:0 16px 34px rgba(16,23,34,.18);
+    }
+    .quote-pricebar span,.quote-pricebar small{display:block;color:rgba(255,255,255,.68);font-size:12px;font-weight:800}
+    .quote-pricebar strong{display:block;margin-top:4px;font-size:28px;line-height:1;font-weight:950}
+    .form-step{
+      display:grid;
+      gap:9px;
+      padding:12px;
+      border:1px solid rgba(16,23,34,.09);
+      border-radius:var(--radius);
+      background:#fff;
+    }
+    .form-step.is-hidden,.is-hidden{display:none!important}
+    .step-kicker{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#3d4a59;font-size:13px;font-weight:950}
+    .step-kicker small{color:var(--muted);font-size:12px;font-weight:760}
+    .pax-choice{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .pax-choice .pax{width:100%;height:44px}
+    .datetime-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .luggage-grid{display:grid;gap:8px}
+    .luggage-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 11px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+    }
+    .luggage-row strong{display:block;color:var(--ink);font-size:14px}
+    .luggage-row span{display:block;color:var(--muted);font-size:12px;font-weight:740}
+    .counter{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+    .counter button{
+      width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);
+      background:#f5f8fc;color:var(--ink);font-weight:950;
+    }
+    .counter output{min-width:22px;text-align:center;font-weight:950;color:var(--ink)}
+    .share-disclaimer{
+      padding:12px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,90,22,.22);
+      background:#fff8f2;
+      color:#4d5a68;
+      font-size:13px;
+      font-weight:780;
+      line-height:1.45;
+    }
+    .share-disclaimer strong{color:var(--orange-dark)}
+    .share-option{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      padding:10px 11px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      color:#52606f;
+      font-size:13px;
+      font-weight:800;
+      line-height:1.35;
+    }
+    .share-option input{margin-top:2px;accent-color:var(--orange)}
+    .booking-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .booking-actions .btn{flex:1}
+    .helper-line{color:#5d6977;font-size:13px;font-weight:700;line-height:1.55}
+
+    .route-card{display:none}
+    .route-mini{display:grid;gap:12px}
+    .route-mini-top{display:flex;align-items:center;justify-content:space-between;gap:14px;color:#42505d;font-size:13px;font-weight:900}
+    .route-track{position:relative;height:44px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px}
+    .route-pin{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;font-weight:950;box-shadow:0 8px 18px rgba(20,127,209,.25)}
+    .route-pin.end{background:var(--orange)}
+    .route-line{height:3px;border-radius:999px;background:repeating-linear-gradient(90deg, var(--orange) 0 10px, transparent 10px 18px)}
+    .route-car{
+      position:absolute;
+      left:44px;
+      top:2px;
+      width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+      background:var(--ink);color:#fff;box-shadow:0 12px 24px rgba(16,23,34,.22);
+      animation:carTravel 5.5s ease-in-out infinite;
+    }
+    @keyframes carTravel{0%,100%{transform:translateX(0)}50%{transform:translateX(min(315px, 39vw))}}
+    .pax-panel{display:grid;gap:10px}
+    .pax-panel strong{font-size:13px;color:#394654}
+    .pax-buttons{display:flex;gap:8px}
+    .pax{
+      width:38px;height:38px;border-radius:var(--radius);border:1px solid var(--line);
+      background:#fff;color:var(--muted);font-weight:950;
+    }
+    .pax.active{background:var(--orange);border-color:var(--orange);color:#fff;box-shadow:0 10px 22px rgba(255,90,22,.25)}
+    .price-readout{font-size:30px;font-weight:950;letter-spacing:0}
+    .price-readout small{font-size:14px;color:var(--muted);letter-spacing:0}
+
+    .status-pill{
+      position:absolute;
+      top:24px;
+      left:24px;
+      z-index:4;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      max-width:330px;
+      padding:10px 12px;
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.90);
+      box-shadow:0 14px 34px rgba(16,23,34,.16);
+      font-weight:900;
+      color:#364250;
+    }
+    .status-pill b{color:var(--green)}
+    .floating-price{
+      position:absolute;
+      top:24px;
+      right:24px;
+      z-index:4;
+      display:none;
+      padding:12px 14px;
+      border-radius:var(--radius);
+      background:var(--ink);
+      color:#fff;
+      box-shadow:0 16px 34px rgba(16,23,34,.22);
+      animation:floatSoft 4s ease-in-out infinite;
+    }
+    .floating-price strong{display:block;font-size:25px;letter-spacing:0}
+    .floating-price span{display:block;color:rgba(255,255,255,.72);font-size:12px;font-weight:850}
+    @keyframes floatSoft{50%{transform:translateY(-8px)}}
+    .ticker{overflow:hidden;background:var(--ink);color:#fff}
+    .ticker-track{display:flex;width:max-content;gap:28px;padding:14px 0;font-weight:950;text-transform:uppercase;font-size:14px;letter-spacing:0;animation:ticker 34s linear infinite}
+    .ticker span{white-space:nowrap;color:rgba(255,255,255,.86)}
+    .ticker b{color:var(--yellow)}
+    @keyframes ticker{to{transform:translateX(-50%)}}
+
+    section{padding:86px 0}
+    .section-head{max-width:800px;margin:0 auto 40px;text-align:center}
+    .section-head.left{text-align:left;margin-left:0}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;padding:8px 11px;border-radius:999px;
+      background:#fff;border:1px solid var(--line);color:#344151;font-weight:950;font-size:13px;
+    }
+    h2{font-size:clamp(38px,5vw,62px);line-height:1.04;letter-spacing:0}
+    .section-head p{margin-top:17px;color:var(--muted);font-size:19px;line-height:1.55;font-weight:650}
+
+    .routes-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .conversion-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .conversion-card,.mini-proof{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.86);
+      box-shadow:var(--shadow-soft);
+    }
+    .conversion-card{padding:30px;background:linear-gradient(135deg,#fff,#f2f8ff)}
+    .conversion-card h3{font-size:31px;line-height:1.12;letter-spacing:0;margin-bottom:12px}
+    .conversion-card p,.mini-proof p{color:var(--muted);font-weight:650;line-height:1.62}
+    .microcopy{margin-top:16px;padding:12px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);color:#52606f;font-size:14px;font-weight:780;line-height:1.45}
+    .conversion-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+    .conversion-point{padding:14px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+    .conversion-point b{display:block;color:var(--orange);font-size:21px;letter-spacing:0}
+    .conversion-point span{display:block;margin-top:5px;color:#52606f;font-size:13px;font-weight:800;line-height:1.32}
+    .mini-proof{padding:24px;display:grid;gap:14px}
+    .mini-proof strong{font-size:20px;line-height:1.2}
+    .mini-proof .btn{width:100%}
+    .route-feature,.side-card,.step,.benefit,.quote,.price-box,.faq-box{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.82);
+      box-shadow:var(--shadow-soft);
+    }
+    .route-feature{padding:28px;background:linear-gradient(135deg,#fff, #f2f8ff)}
+    .badge{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 11px;background:var(--orange);color:#fff;font-weight:950;font-size:13px;text-transform:uppercase;letter-spacing:0}
+    .route-big{display:grid;grid-template-columns:1fr 170px 1fr;gap:20px;align-items:center;margin-top:30px}
+    .place{display:flex;gap:14px;align-items:center}
+    .place:last-child{justify-content:flex-end;text-align:right}
+    .place-icon{width:54px;height:54px;border-radius:var(--radius);display:grid;place-items:center;background:var(--blue);color:#fff;font-size:22px;font-weight:950}
+    .place-icon.orange{background:var(--orange)}
+    .place h3{font-size:25px;letter-spacing:0}
+    .place small{display:block;margin-top:3px;color:var(--muted);font-weight:800}
+    .route-dots{height:3px;background:repeating-linear-gradient(90deg,var(--orange) 0 10px,transparent 10px 22px)}
+    .route-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:30px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-weight:800}
+    .route-meta b{color:var(--ink)}
+    .side-routes{display:grid;gap:18px}
+    .side-card{padding:22px}
+    .side-card h3{font-size:22px;letter-spacing:0;margin:14px 0 8px}
+    .side-card p{color:var(--muted);font-weight:650;line-height:1.5}
+    .route-code{display:inline-flex;align-items:center;justify-content:center;width:44px;height:34px;border-radius:var(--radius);background:var(--blue-soft);color:var(--blue);font-weight:950}
+    .ask{display:inline-flex;margin-top:16px;color:var(--orange-dark);font-weight:950}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{padding:28px;position:relative;overflow:hidden}
+    .step::before{content:attr(data-step);position:absolute;right:18px;top:10px;color:rgba(255,90,22,.15);font-size:78px;font-weight:950;letter-spacing:0}
+    .step-icon,.benefit-icon{width:52px;height:52px;border-radius:var(--radius);display:grid;place-items:center;background:var(--orange);color:#fff;font-weight:950;font-size:22px;margin-bottom:22px}
+    .step h3,.benefit h3,.faq-question{font-size:23px;letter-spacing:0}
+    .step h3,.benefit h3{margin-bottom:10px}
+    .step p,.benefit p,.faq-item p,.quote p{color:var(--muted);font-weight:650;line-height:1.55}
+
+    .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .benefit{padding:26px;min-height:218px}
+    .benefit.featured{background:var(--ink);color:#fff}
+    .benefit.featured p{color:rgba(255,255,255,.75)}
+    .benefit-icon{background:var(--blue-soft);color:var(--blue)}
+    .benefit.featured .benefit-icon{background:var(--orange);color:#fff}
+
+    .proof{background:var(--ink);color:#fff;padding:44px;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;position:relative}
+    .proof::after{content:"";position:absolute;inset:auto -10% -40% 50%;height:260px;background:radial-gradient(circle, rgba(255,90,22,.32), transparent 65%);pointer-events:none}
+    .proof .section-head{position:relative;z-index:1;color:#fff}
+    .proof .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#fff}
+    .proof .section-head p{color:rgba(255,255,255,.70)}
+    .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:1}
+    .quote{padding:22px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)}
+    .quote p{color:rgba(255,255,255,.86);font-size:17px}
+    .proof-action{position:relative;z-index:1;margin-top:24px;display:flex;justify-content:center}
+    .stars{color:var(--yellow);letter-spacing:0;margin-bottom:14px}
+    .person{margin-top:18px;color:rgba(255,255,255,.68);font-weight:900}
+
+    .price-faq{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}
+    .price-box,.faq-box{padding:30px}
+    .price{margin:20px 0 12px;font-size:76px;line-height:.95;font-weight:950;letter-spacing:0}
+    .price small{font-size:24px;color:var(--muted);letter-spacing:0}
+    .price-context{margin:-4px 0 14px;color:#3d4a59;font-size:14px;font-weight:900}
+    .price-note{color:var(--muted);font-size:18px;line-height:1.5;font-weight:650}
+    .price-list{display:grid;gap:12px;margin-top:22px}
+    .price-list li{list-style:none;display:flex;gap:10px;color:#52606f;font-weight:760;line-height:1.45}
+    .price-list li::before{content:"✓";color:var(--green);font-weight:950}
+    .fare-estimator{
+      display:grid;
+      gap:14px;
+      margin-top:24px;
+      padding:16px;
+      border:1px solid rgba(16,23,34,.11);
+      border-radius:var(--radius);
+      background:#fff;
+    }
+    .fare-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:grid;gap:7px}
+    .field.wide{grid-column:1/-1}
+    .field label{color:#3d4a59;font-size:13px;font-weight:950}
+    .field select,.field input{
+      width:100%;
+      min-height:44px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      color:var(--ink);
+      padding:10px 11px;
+      font-weight:800;
+    }
+    .fare-result{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+    }
+    .fare-metric{
+      padding:12px;
+      border-radius:var(--radius);
+      background:var(--surface-2);
+    }
+    .fare-metric span{display:block;color:var(--muted);font-size:12px;font-weight:850}
+    .fare-metric strong{display:block;margin-top:4px;font-size:28px;line-height:1;font-weight:950;letter-spacing:0}
+    .fare-helper{
+      padding:12px;
+      border-left:3px solid var(--orange);
+      background:#fff8f2;
+      color:#52606f;
+      font-size:14px;
+      font-weight:720;
+      line-height:1.45;
+    }
+    .seat-note{
+      margin-top:10px;
+      color:#52606f;
+      font-size:13px;
+      font-weight:800;
+      line-height:1.4;
+    }
+    .faq{display:grid;gap:10px}
+    .faq-item{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:0;overflow:hidden}
+    .faq-toggle{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px;border:0;background:transparent;text-align:left;color:var(--ink)}
+    .faq-question{font-weight:950;line-height:1.18}
+    .faq-icon{font-size:24px;color:var(--orange);transition:transform .2s ease}
+    .faq-item p{display:none;padding:0 18px 18px}
+    .faq-item a{color:var(--orange-dark);font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+    .faq-item.open p{display:block}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+
+    .cta{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:26px;
+      align-items:center;
+      padding:38px;
+      border-radius:var(--radius);
+      background:linear-gradient(135deg,var(--orange),#ff8b2b);
+      color:#fff;
+      box-shadow:0 24px 64px rgba(255,90,22,.24);
+    }
+    .cta h2{font-size:clamp(34px,4vw,58px)}
+    .cta p{margin-top:14px;color:rgba(255,255,255,.82);font-size:19px;line-height:1.5;font-weight:650;max-width:720px}
+    .cta .btn{background:#fff;color:var(--orange-dark);box-shadow:0 16px 34px rgba(16,23,34,.16)}
+
+    footer{padding:28px 0 42px;color:var(--muted)}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line);font-weight:760}
+    .sticky-wa{
+      position:fixed;right:20px;bottom:18px;z-index:40;
+      opacity:0;pointer-events:none;transform:translateY(12px);
+    }
+    .sticky-wa.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease, transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @media (max-width:1050px){
+      .hero{min-height:auto}
+      .hero-copy{padding-top:0}
+      .hero-grid{
+        grid-template-columns:1fr;
+        grid-template-areas:
+          "copy"
+          "visual"
+          "quote"
+          "support";
+        gap:22px;
+      }
+      .routes-grid,.conversion-grid,.price-faq,.cta{grid-template-columns:1fr}
+      .booking-shell{aspect-ratio:16/9;min-height:0}
+      .scene-svg{height:100%;min-height:0}
+      .trust-row{grid-template-columns:repeat(2,1fr)}
+      .steps,.benefit-grid,.quote-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+    @media (max-width:680px){
+      .container{width:min(var(--max), calc(100% - 24px))}
+      .nav-inner{height:66px}
+      .brand{font-size:17px}.brand small{display:none}
+      .nav .btn{min-height:40px;padding:9px 11px;font-size:13px}
+      .hero{padding:28px 0 50px}
+      .hero-grid{gap:18px}
+      .eyebrow{margin-bottom:16px}
+      h1{font-size:clamp(40px,12.5vw,58px)}
+      .lead{margin-top:18px;font-size:18px;line-height:1.45}
+      .hero-actions .btn{width:100%}
+      .trust-row{grid-template-columns:1fr 1fr}
+      .booking-shell{aspect-ratio:16/9;padding:0}
+      .scene-svg{height:100%}
+      .status-pill{
+        top:10px;
+        left:10px;
+        max-width:220px;
+        padding:7px 9px;
+        gap:6px;
+        font-size:11px;
+        line-height:1.15;
+        display:flex;
+      }
+      .status-pill b{display:none}
+      .booking-panel{padding:16px}
+      .booking-head{display:grid}
+      .booking-head h2{font-size:25px}
+      .quote-pricebar,.airport-choice,.direction-choice,.datetime-grid{grid-template-columns:1fr}
+      body.quote-dock-active .quote-flow{padding-bottom:calc(112px + env(safe-area-inset-bottom))}
+      body.quote-dock-active .quote-pricebar{
+        position:fixed;
+        left:12px;
+        right:12px;
+        bottom:calc(12px + env(safe-area-inset-bottom));
+        z-index:44;
+        grid-template-columns:1fr 1fr;
+        width:auto;
+        padding:10px 12px;
+        border:1px solid rgba(255,255,255,.08);
+        box-shadow:0 18px 46px rgba(16,23,34,.32);
+      }
+      body.quote-dock-active .quote-pricebar span,
+      body.quote-dock-active .quote-pricebar small{font-size:10px}
+      body.quote-dock-active .quote-pricebar strong{font-size:24px}
+      body.quote-dock-active .sticky-wa.visible{opacity:0;pointer-events:none}
+      .conversion-points{grid-template-columns:1fr}
+      .booking-actions .btn{width:100%}
+      .route-big{grid-template-columns:1fr;gap:16px}
+      .place:last-child{justify-content:flex-start;text-align:left}
+      .route-dots{width:70%}
+      section{padding:62px 0}
+      .proof,.cta,.route-feature,.price-box,.faq-box{padding:22px}
+      .price{font-size:64px}
+      .fare-grid,.fare-result{grid-template-columns:1fr}
+      .sticky-wa{left:14px;right:14px;bottom:14px;width:calc(100% - 28px)}
+      .footer-inner{padding-bottom:64px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand" aria-label="Boltify">
+        <span class="brand-mark">⚡</span>
+        <span>Boltify <small>Airport Transfer</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#routes">Comunidad</a>
+        <a href="#how">Cómo funciona</a>
+        <a href="#why">Ventajas</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn btn-primary btn-small" href="#quote">Calcular precio</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Murcia ⇄ aeropuerto · puerta a puerta</div>
+          <h1>Transfer aeropuerto Alicante ⇄ Murcia <span class="grad">para Erasmus</span></h1>
+          <p class="lead">
+            Viaja puerta a puerta, comparte plazas con otros estudiantes y confirma tu traslado por WhatsApp. Ideal para llegadas, salidas y vuelos que no encajan bien con el autobús.
+          </p>
+          <p class="italian-note">Arrivi a Murcia per l’Erasmus? Ti portiamo dall’aeroporto direttamente a casa.</p>
+        </div>
+
+        <div class="booking-shell reveal" aria-label="Animación del traslado Boltify">
+          <svg class="scene-svg" viewBox="0 0 720 405" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="skyGradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#dff3ff" />
+                <stop offset=".68" stop-color="#fff8ef" />
+                <stop offset="1" stop-color="#eedbc3" />
+              </linearGradient>
+              <linearGradient id="roadSceneGradient" x1="0" x2="1">
+                <stop offset="0" stop-color="#2d3948" />
+                <stop offset="1" stop-color="#111923" />
+              </linearGradient>
+              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+                <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#101722" flood-opacity=".18"/>
+              </filter>
+              <path id="heroRoutePath" d="M 104 312 C 222 276, 318 304, 424 266 C 508 236, 586 234, 668 198" />
+            </defs>
+
+            <rect width="720" height="405" fill="url(#skyGradient)" />
+            <circle class="sun-glow" cx="602" cy="72" r="34" fill="#ffd05a" opacity=".82" />
+            <path d="M0 292 C128 256 246 278 368 253 C496 227 594 238 720 198 V405 H0 Z" fill="#ead6be" opacity=".9" />
+            <path d="M-34 342 C110 294 246 314 386 274 C510 240 610 250 756 192" fill="none" stroke="url(#roadSceneGradient)" stroke-width="58" stroke-linecap="round" opacity=".96" />
+            <path d="M-20 340 C114 296 250 310 388 274 C512 244 610 248 742 196" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="18 18" opacity=".46" />
+
+            <g transform="translate(68 218)" filter="url(#softShadow)">
+              <rect x="0" y="58" width="118" height="64" rx="8" fill="#ffffff" />
+              <path d="M-8 62 L58 18 L124 62 Z" fill="#dff1ff" />
+              <path d="M10 60 L58 28 L106 60 Z" fill="#147fd1" opacity=".9" />
+              <rect x="18" y="82" width="26" height="22" rx="4" fill="#dff1ff" />
+              <rect x="72" y="76" width="26" height="46" rx="5" fill="#ff5a16" opacity=".92" />
+              <rect x="14" y="108" width="48" height="14" rx="4" fill="#147fd1" opacity=".88" />
+              <text x="59" y="150" text-anchor="middle" fill="#364250" font-size="19" font-weight="900">Murcia</text>
+            </g>
+
+            <g transform="translate(514 104)" filter="url(#softShadow)">
+              <rect x="-26" y="142" width="220" height="18" rx="9" fill="#101722" opacity=".9" />
+              <rect x="16" y="72" width="154" height="76" rx="8" fill="#ffffff" />
+              <path d="M4 74 H184 L156 44 H34 Z" fill="#ffede0" />
+              <rect x="34" y="96" width="32" height="24" rx="4" fill="#dff1ff" />
+              <rect x="78" y="96" width="32" height="24" rx="4" fill="#dff1ff" />
+              <rect x="122" y="92" width="30" height="56" rx="5" fill="#ff5a16" opacity=".92" />
+              <rect x="34" y="128" width="82" height="20" rx="5" fill="#147fd1" opacity=".9" />
+              <circle cx="94" cy="38" r="35" fill="#ffffff" />
+              <path d="M68 43 L118 26 C124 24 128 29 122 33 L104 46 L110 62 L101 66 L90 52 L74 61 L70 55 L83 45 L67 47 Z" fill="#ff5a16" />
+              <text id="airportVisualLabel" x="94" y="194" text-anchor="middle" fill="#364250" font-size="19" font-weight="900">Aeropuerto</text>
+            </g>
+
+            <path d="M 104 312 C 222 276, 318 304, 424 266 C 508 236, 586 234, 668 198" fill="none" stroke="#fff8f2" stroke-width="16" stroke-linecap="round" opacity=".78" />
+            <path class="route-dash" d="M 104 312 C 222 276, 318 304, 424 266 C 508 236, 586 234, 668 198" fill="none" stroke="#ff5a16" stroke-width="6" stroke-linecap="round" />
+
+            <g transform="translate(188 292)" filter="url(#softShadow)">
+              <rect x="0" y="12" width="32" height="43" rx="7" fill="#ff5a16" />
+              <path d="M8 12 V2 h16 v10" fill="none" stroke="#101722" stroke-width="4" stroke-linecap="round" />
+              <circle cx="9" cy="59" r="4" fill="#101722" opacity=".55" />
+              <circle cx="23" cy="59" r="4" fill="#101722" opacity=".55" />
+              <rect x="42" y="6" width="30" height="49" rx="7" fill="#147fd1" />
+              <path d="M50 6 V-4 h14 V6" fill="none" stroke="#101722" stroke-width="4" stroke-linecap="round" />
+              <circle cx="50" cy="59" r="4" fill="#101722" opacity=".55" />
+              <circle cx="64" cy="59" r="4" fill="#101722" opacity=".55" />
+            </g>
+
+            <g filter="url(#softShadow)">
+              <g>
+                <animateMotion dur="8s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear">
+                  <mpath href="#heroRoutePath" />
+                </animateMotion>
+                <g transform="translate(-34 -19)">
+                  <rect x="5" y="9" width="58" height="28" rx="8" fill="#ff5a16" />
+                  <path d="M16 10 L26 0 H44 L55 10 Z" fill="#147fd1" />
+                  <circle cx="18" cy="38" r="7" fill="#fff" />
+                  <circle cx="50" cy="38" r="7" fill="#fff" />
+                  <circle cx="18" cy="38" r="3" fill="#101722" />
+                  <circle cx="50" cy="38" r="3" fill="#101722" />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <div class="status-pill"><b id="statusPrice">Desde horario base</b> <span id="statusRoute">Murcia ⇄ Aeropuerto</span></div>
+          <div class="floating-price"><strong id="heroPerPerson">13,75€</strong><span id="heroPriceLabel">por persona si sois 4</span></div>
+        </div>
+
+        <div class="booking-panel reveal" id="quote" aria-label="Calculadora de precio Boltify">
+          <div class="booking-head">
+            <span class="chip">Solicitud guiada</span>
+            <h2>Calcula el precio de tu traslado</h2>
+            <p>El precio se calcula según aeropuerto, sentido, hora y pasajeros. El equipaje ayuda a confirmar capacidad y tiempos de recogida.</p>
+          </div>
+
+          <div class="quote-flow">
+            <section class="form-step" data-step="1">
+              <div class="step-kicker"><span>1. Elige el aeropuerto</span><small>Precio base visible al momento</small></div>
+              <div class="airport-choice" role="group" aria-label="Aeropuerto vinculado">
+                <button class="airport-option" data-airport="alc" type="button">
+                  <strong>ALC</strong>
+                  <span>Aeropuerto de Alicante</span>
+                </button>
+                <button class="airport-option" data-airport="rmu" type="button">
+                  <strong>RMU</strong>
+                  <span>Región de Murcia</span>
+                </button>
+                <button class="airport-option" data-airport="vlc" type="button">
+                  <strong>VLC</strong>
+                  <span>Aeropuerto de Valencia</span>
+                </button>
+              </div>
+            </section>
+
+            <div class="quote-pricebar is-hidden" id="quotePricebar" aria-live="polite">
+              <div>
+                <span id="fareStateLabel">Desde horario base</span>
+                <strong id="totalPrice">55,00€</strong>
+                <small>Total estimado</small>
+              </div>
+              <div>
+                <span>Por persona</span>
+                <strong id="perPersonPrice">13,75€</strong>
+                <small id="perPersonHint">si sois 4</small>
+              </div>
+            </div>
+
+            <p class="helper-line is-hidden" id="fareHelper">Elige el aeropuerto para ver la estimación inicial del traslado.</p>
+
+            <section class="form-step is-hidden" data-step="2">
+              <div class="step-kicker"><span>2. ¿Qué necesitas?</span><small>Ida o vuelta</small></div>
+              <div class="direction-choice" role="group" aria-label="Dirección del traslado">
+                <button class="direction-option" data-direction="airport-to-murcia" type="button">
+                  <b>↓</b>
+                  <span>Llego al aeropuerto y voy a Murcia</span>
+                </button>
+                <button class="direction-option" data-direction="murcia-to-airport" type="button">
+                  <b>↑</b>
+                  <span>Salgo desde Murcia al aeropuerto</span>
+                </button>
+              </div>
+            </section>
+
+            <section class="form-step is-hidden" data-step="3">
+              <div class="field">
+                <label for="timeInput" id="timeLabel">3. ¿A qué hora aterrizas?</label>
+                <input id="timeInput" type="time" />
+              </div>
+            </section>
+
+            <section class="form-step is-hidden" data-step="4">
+              <div class="step-kicker"><span>4. ¿Cuántos sois?</span><small>Hasta 4 plazas</small></div>
+              <div class="pax-choice" role="group" aria-label="Número de pasajeros">
+                <button class="pax" data-pax="1" type="button">1</button>
+                <button class="pax" data-pax="2" type="button">2</button>
+                <button class="pax" data-pax="3" type="button">3</button>
+                <button class="pax" data-pax="4" type="button">4</button>
+              </div>
+              <div class="share-disclaimer is-hidden" id="seatNote">
+                <strong>Coche completo.</strong> El precio ya queda dividido entre 4 pasajeros.
+              </div>
+              <label class="share-option is-hidden" id="shareOption">
+                <input id="shareSeats" type="checkbox" />
+                <span>Quiero que intentéis compartir las plazas libres con otros Erasmus. Nunca se publicará mi dirección exacta ni mis datos personales.</span>
+              </label>
+            </section>
+
+            <section class="form-step is-hidden" data-step="5">
+              <div class="field">
+                <label for="dateInput">5. ¿Qué día quieres el traslado?</label>
+                <input id="dateInput" type="date" />
+              </div>
+              <div class="field">
+                <label for="flightInput">Número de vuelo, si lo tienes</label>
+                <input id="flightInput" type="text" placeholder="Ej. FR1234" autocomplete="off" />
+              </div>
+            </section>
+
+            <section class="form-step is-hidden" data-step="6">
+              <div class="step-kicker"><span>6. ¿Cuánto equipaje irá contigo?</span><small>Cuenta aproximada</small></div>
+              <div class="luggage-grid">
+                <div class="luggage-row">
+                  <div><strong>Mochilas</strong><span>Backpacks o bolsos de mano</span></div>
+                  <div class="counter">
+                    <button data-luggage="backpacks" data-change="-1" type="button" aria-label="Quitar mochila">-</button>
+                    <output id="backpacksCount">0</output>
+                    <button data-luggage="backpacks" data-change="1" type="button" aria-label="Añadir mochila">+</button>
+                  </div>
+                </div>
+                <div class="luggage-row">
+                  <div><strong>Maletas 10 kg</strong><span>Cabina o carry-on</span></div>
+                  <div class="counter">
+                    <button data-luggage="cabin10" data-change="-1" type="button" aria-label="Quitar maleta de cabina">-</button>
+                    <output id="cabin10Count">0</output>
+                    <button data-luggage="cabin10" data-change="1" type="button" aria-label="Añadir maleta de cabina">+</button>
+                  </div>
+                </div>
+                <div class="luggage-row">
+                  <div><strong>Maletas 20 kg</strong><span>Facturadas en bodega</span></div>
+                  <div class="counter">
+                    <button data-luggage="checked20" data-change="-1" type="button" aria-label="Quitar maleta facturada">-</button>
+                    <output id="checked20Count">0</output>
+                    <button data-luggage="checked20" data-change="1" type="button" aria-label="Añadir maleta facturada">+</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="route-card" aria-label="Resumen del trayecto">
+              <div class="route-mini">
+                <div class="route-mini-top">
+                  <span id="routeStartLabel">Murcia ciudad</span>
+                  <span id="routeEndLabel">Aeropuerto</span>
+                </div>
+                <div class="route-track" aria-hidden="true">
+                  <span class="route-pin" id="routeCodeStart">MUR</span>
+                  <span class="route-line"></span>
+                  <span class="route-pin end" id="routeCodeEnd">ALC</span>
+                  <span class="route-car">→</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-actions is-hidden" id="quoteActions">
+              <a class="btn btn-primary js-wa" href="#quote">Pedir disponibilidad por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-support reveal">
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Calcular mi precio</a>
+            <a class="btn btn-secondary" href="#how">Ver cómo funciona</a>
+          </div>
+          <div class="trust-row" aria-label="Ventajas principales">
+            <div class="trust-item"><b>Compartir plazas</b><span>Intentamos completar el coche con otros Erasmus si tú quieres.</span></div>
+            <div class="trust-item"><b>Puerta a puerta</b><span>Te recogemos o dejamos en tu dirección, sin cargar maletas por Murcia.</span></div>
+            <div class="trust-item"><b>Más directo</b><span>Una alternativa cómoda cuando el bus no encaja con tu vuelo.</span></div>
+            <div class="trust-item"><b>Reseñas reales</b><span>Valoraciones de clientes que ya han viajado con Boltify.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span><b>✓</b> Intentamos completar plazas</span><span><b>✓</b> Puerta a puerta con maletas</span><span><b>✓</b> Más directo que el bus</span><span><b>✓</b> Puede salir más económico que un taxi</span><span><b>✓</b> Confirmación directa por WhatsApp</span>
+        <span><b>✓</b> Intentamos completar plazas</span><span><b>✓</b> Puerta a puerta con maletas</span><span><b>✓</b> Más directo que el bus</span><span><b>✓</b> Puede salir más económico que un taxi</span><span><b>✓</b> Confirmación directa por WhatsApp</span>
+      </div>
+    </div>
+
+    <section id="routes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip">Comunidad Erasmus</div>
+          <h2>Pensado para estudiantes Erasmus que llegan o salen de Murcia.</h2>
+          <p>Si vienes solo, con compañeros de vuelo o con gente del piso, Boltify te ayuda a calcular el traslado y, si quedan plazas libres, a intentar compartir el viaje con otros Erasmus.</p>
+        </div>
+        <div class="conversion-grid">
+          <article class="conversion-card reveal">
+            <h3>¿Viajas solo y quieres compartir el traslado?</h3>
+            <p>Si hay plazas libres, podemos avisar en grupos Erasmus para intentar encontrar otros estudiantes con una ruta compatible. Tú decides si quieres compartir o viajar de forma privada.</p>
+            <div class="conversion-points">
+              <div class="conversion-point"><b>Compartir</b><span>Avisamos en grupos Erasmus con tu permiso</span></div>
+              <div class="conversion-point"><b>Sin caminata</b><span>Del aeropuerto a tu puerta, no solo hasta la estación</span></div>
+              <div class="conversion-point"><b>Conductor</b><span>Reserva web y dudas directas por WhatsApp</span></div>
+            </div>
+            <p class="microcopy">Nunca compartimos tu dirección exacta ni tus datos personales. Solo avisamos de la ruta aproximada, fecha, hora y plazas disponibles.</p>
+          </article>
+          <aside class="mini-proof reveal">
+            <strong>Reserva clara, conversación directa.</strong>
+            <p>La solicitud llega al conductor con ruta, hora, pasajeros y equipaje. Después confirmas disponibilidad, precio final y dudas por WhatsApp.</p>
+            <a class="btn btn-primary" href="#quote">Calcular mi traslado</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip">Cómo funciona</div>
+          <h2>Calculas en la web. Confirmas con el conductor.</h2>
+          <p>Calcula una estimación, añade los datos del viaje y envía la solicitud por WhatsApp sin tener que explicarlo todo desde cero.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal" data-step="01">
+            <div class="step-icon">1</div>
+            <h3>Elige aeropuerto y sentido</h3>
+            <p>Selecciona ALC, RMU o VLC e indica si llegas al aeropuerto o si sales desde Murcia.</p>
+          </article>
+          <article class="step reveal" data-step="02">
+            <div class="step-icon">2</div>
+            <h3>Añade hora, fecha, pasajeros y equipaje</h3>
+            <p>La web calcula una estimación según el trayecto, la franja horaria y el número de pasajeros. El equipaje nos ayuda a confirmar tiempos y capacidad.</p>
+          </article>
+          <article class="step reveal" data-step="03">
+            <div class="step-icon">3</div>
+            <h3>Envía la solicitud por WhatsApp</h3>
+            <p>El conductor revisa disponibilidad, confirma el precio final y te indica cómo dejar la reserva preparada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip">Ventajas</div>
+          <h2>Viajar al aeropuerto sin cargar con todo el plan.</h2>
+          <p>Menos caminatas, menos combinaciones raras y más margen para organizar el vuelo con tranquilidad.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit featured reveal">
+            <div class="benefit-icon">€</div>
+            <h3>Te ayudamos a encontrar con quién compartir</h3>
+            <p>Si sois menos de 4, con tu permiso intentamos avisar en grupos Erasmus de que hay plazas disponibles para que el viaje pueda salir más económico.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">⌂</div>
+            <h3>Olvídate de cruzar Murcia con maletas</h3>
+            <p>Te recogemos o te dejamos en la puerta. Sin caminar desde la estación hasta el piso cargando equipaje.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">↗</div>
+            <h3>Más directo que el autobús</h3>
+            <p>Vas entre Murcia y el aeropuerto sin cargar maletas, sin transbordos y sin depender de horarios que quizá no encajan con tu vuelo.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">€</div>
+            <h3>Puede salir más económico que un taxi</h3>
+            <p>Especialmente si compartís plazas. Ves una estimación antes de escribir y puedes pedir que intentemos completar el coche.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">★</div>
+            <h3>Reseñas reales de cinco estrellas</h3>
+            <p>Clientes que ya han usado Boltify para ir al aeropuerto han dejado valoraciones reales en Google Maps.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">↺</div>
+            <h3>Flexibilidad si tu vuelo cambia</h3>
+            <p>Si tu vuelo cambia o se retrasa, avisa por WhatsApp cuanto antes. El conductor te confirmará cómo reorganizar la recogida según la disponibilidad y la franja horaria.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="proof reveal">
+          <div class="section-head left">
+            <div class="chip">Prueba social</div>
+            <h2>Erasmus que ya han viajado con Boltify.</h2>
+            <p>Traslados reales entre Murcia y el aeropuerto, con trato directo por WhatsApp y reseñas verificables en Google.</p>
+          </div>
+          <div class="quote-grid">
+            <article class="quote">
+              <div class="stars">Google Maps</div>
+              <p>Consulta las reseñas reales de clientes que ya han usado Boltify para ir o volver del aeropuerto.</p>
+              <div class="person">Opiniones verificables</div>
+            </article>
+            <article class="quote">
+              <div class="stars">Comunidad Erasmus</div>
+              <p>Servicio pensado para estudiantes que llegan a Murcia, vuelven a casa o buscan compartir traslado con otros compañeros.</p>
+              <div class="person">Llegadas y salidas</div>
+            </article>
+            <article class="quote">
+              <div class="stars">WhatsApp directo</div>
+              <p>La solicitud llega ordenada al conductor: aeropuerto, hora, pasajeros, equipaje y plazas libres si queréis compartir.</p>
+              <div class="person">Sin mensajes eternos</div>
+            </article>
+          </div>
+          <div class="proof-action">
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/gK6Mz6JLpgPkce297?g_st=ic" target="_blank" rel="noopener">Ver reseñas en Google</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container price-faq">
+        <div class="price-box reveal">
+          <div class="chip">Estimador de precio</div>
+          <h2>Precios base claros. Horarios nocturnos calculados al momento.</h2>
+          <div class="price" id="mainPrice">55,00€ <small>/ total estimado</small></div>
+          <p class="price-context">Ejemplo: ALC ⇄ Murcia en horario base.</p>
+          <p class="price-note">El precio se calcula según aeropuerto, sentido, hora y pasajeros. El equipaje ayuda a confirmar capacidad y tiempos de recogida.</p>
+
+          <ul class="price-list">
+            <li>ALC ⇄ Murcia desde 55€ en horario base.</li>
+            <li>RMU ⇄ Murcia desde 34,90€ en horario base.</li>
+            <li>VLC ⇄ Murcia desde 169,90€ en horario base.</li>
+            <li>De noche o madrugada, el precio se recalcula con incrementos proporcionales.</li>
+            <li>Si sois menos de 4, podemos intentar completar plazas en grupos Erasmus.</li>
+            <li>Para confirmar la reserva, el conductor te indicará por WhatsApp si hace falta dejar una pequeña señal.</li>
+          </ul>
+        </div>
+
+        <div class="faq-box reveal">
+          <div class="chip">Dudas frecuentes</div>
+          <div class="faq">
+            <article class="faq-item open">
+              <button class="faq-toggle" type="button" aria-expanded="true"><span class="faq-question">¿Qué pasa si viajo solo o somos menos de 4?</span><span class="faq-icon">+</span></button>
+              <p>Con tu permiso, podemos avisar en grupos Erasmus de que hay plazas disponibles para intentar encontrar estudiantes con un traslado compatible. Si se completa el coche, baja el precio por persona.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿La solicitud confirma la reserva al momento?</span><span class="faq-icon">+</span></button>
+              <p>No. La web prepara la solicitud y la envía al WhatsApp del conductor. Él confirma disponibilidad, resuelve dudas y te indica cómo dejar la reserva preparada.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Cómo confirmo la reserva?</span><span class="faq-icon">+</span></button>
+              <p>Para confirmar la reserva, el conductor te indicará por WhatsApp si hace falta dejar una pequeña señal. El resto se paga el día del traslado, según el método acordado.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Por qué cambia el precio según la hora?</span><span class="faq-icon">+</span></button>
+              <p>Los horarios nocturnos y de madrugada requieren más disponibilidad. Por eso el estimador parte del precio base de cada aeropuerto y aplica incrementos según la franja horaria.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">Si aterrizo, ¿qué hora debo poner?</span><span class="faq-icon">+</span></button>
+              <p>Pon la hora de aterrizaje en el aeropuerto elegido. Normalmente calculamos recogida 15 minutos después si solo llevas equipaje de mano y 30 minutos si hay maleta facturada.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Qué pasa si mi vuelo llega con retraso?</span><span class="faq-icon">+</span></button>
+              <p>Si tu vuelo cambia o se retrasa, avisa por WhatsApp cuanto antes. El conductor te confirmará cómo reorganizar la recogida según la disponibilidad y la franja horaria.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Por qué elegir Boltify si hay bus?</span><span class="faq-icon">+</span></button>
+              <p>Porque no siempre encaja con tu vuelo y no te deja en la puerta. Boltify es más directo, cómodo con maletas y flexible si necesitas salir o llegar a una hora concreta.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Puede salir más barato que un taxi?</span><span class="faq-icon">+</span></button>
+              <p>Normalmente puede salir más económico, sobre todo si compartís coche. Además, puedes ver una estimación antes de escribir al conductor.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Hay opiniones reales del servicio?</span><span class="faq-icon">+</span></button>
+              <p>Sí. Boltify cuenta con reseñas reales de cinco estrellas en <a href="https://maps.app.goo.gl/gK6Mz6JLpgPkce297?g_st=ic" target="_blank" rel="noopener">Google Maps</a> de clientes que han usado el servicio para ir al aeropuerto.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Publicáis mis datos si quiero compartir plazas?</span><span class="faq-icon">+</span></button>
+              <p>No. Si quieres intentar compartir el coche, solo se publica información básica del trayecto: aeropuerto, fecha, hora aproximada y plazas libres. Nunca se publica tu dirección exacta ni datos personales.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Puedo reservar si todavía no sé la dirección exacta?</span><span class="faq-icon">+</span></button>
+              <p>Sí. Puedes enviar la solicitud con una zona aproximada de Murcia y confirmar la dirección final más adelante por WhatsApp.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Caben 4 personas con maletas grandes?</span><span class="faq-icon">+</span></button>
+              <p>Depende del equipaje. Si viajáis 4 personas con varias maletas facturadas, confirmadlo antes por WhatsApp para comprobar que el coche tiene capacidad suficiente.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿La estimación de la web es final?</span><span class="faq-icon">+</span></button>
+              <p>No. Es una referencia útil para decidir. El precio final se confirma por WhatsApp según disponibilidad, dirección exacta, equipaje y posibles plazas compartidas.</p>
+            </article>
+            <article class="faq-item">
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Qué tengo que enviar en la solicitud?</span><span class="faq-icon">+</span></button>
+              <p>Ruta, fecha, hora o número de vuelo, pasajeros, maletas, dirección de recogida o destino y si quieres que intentemos compartir plazas libres.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <h2>¿Ya tienes vuelo y hora?</h2>
+            <p>Calcula el traslado, pide disponibilidad por WhatsApp y deja la reserva preparada con el conductor. Rápido, directo y puerta a puerta.</p>
+          </div>
+          <a class="btn js-wa" href="#quote">Pedir disponibilidad por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="btn btn-primary sticky-wa js-wa" href="#">WhatsApp</a>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="#" class="brand" aria-label="Boltify">
+        <span class="brand-mark">⚡</span>
+        <span>Boltify <small>Airport Transfer</small></span>
+      </a>
+      <span>Murcia, España · WhatsApp: +34 667 596 794</span>
+      <span>
+        <!-- TODO: sustituir # por la URL real de Aviso legal antes de publicar. -->
+        <a href="#" aria-label="Aviso legal">Aviso legal</a> ·
+        <!-- TODO: sustituir # por la URL real de Política de privacidad antes de publicar. -->
+        <a href="#" aria-label="Política de privacidad">Política de privacidad</a> ·
+        <a href="https://maps.app.goo.gl/gK6Mz6JLpgPkce297?g_st=ic" target="_blank" rel="noopener">Google Maps / reseñas</a>
+      </span>
+      <span>© 2026 Boltify</span>
+    </div>
+  </footer>
+
+  <script>
+    const WHATSAPP_NUMBER = "34667596794";
+    let pax = null;
+    let airport = "";
+    let direction = "";
+    let formProgress = 1;
+    const luggage = {
+      backpacks: 0,
+      cabin10: 0,
+      checked20: 0
+    };
+
+    const curves = {
+      murciaPickup: [
+        ["08:15", "19:30", 55],
+        ["19:31", "21:30", 59.90],
+        ["21:31", "22:30", 64.90],
+        ["22:31", "23:30", 74.90],
+        ["23:31", "00:30", 79.90],
+        ["00:31", "01:30", 89.90],
+        ["01:31", "04:00", 120],
+        ["04:01", "04:30", 79.90],
+        ["04:31", "05:00", 74.90],
+        ["05:01", "05:30", 69.90],
+        ["05:31", "07:15", 64.90],
+        ["07:16", "08:14", 59.90]
+      ],
+      airportPickup: [
+        ["09:30", "20:30", 55],
+        ["20:31", "21:30", 59.90],
+        ["21:31", "22:30", 64.90],
+        ["22:31", "23:30", 69.90],
+        ["23:31", "00:30", 74.90],
+        ["00:31", "01:30", 84.90],
+        ["01:31", "02:30", 94.90],
+        ["02:31", "03:30", 109.90],
+        ["03:31", "04:30", 129.90],
+        ["04:31", "05:30", 99.90],
+        ["05:31", "06:30", 84.90],
+        ["06:31", "07:30", 74.90],
+        ["07:31", "09:29", 64.90]
+      ]
+    };
+
+    const routes = {
+      "alc-murcia": {
+        label:"Aeropuerto de Alicante → Murcia",
+        start:"Aeropuerto Alicante",
+        end:"Murcia ciudad",
+        codes:["ALC","MUR"],
+        curve:"airportPickup",
+        multiplier:1,
+        airportOrigin:true,
+        duration:"45 min aprox.",
+        note:"Referencia ALC → Murcia."
+      },
+      "murcia-alc": {
+        label:"Murcia → Aeropuerto de Alicante",
+        start:"Murcia ciudad",
+        end:"Aeropuerto Alicante",
+        codes:["MUR","ALC"],
+        curve:"murciaPickup",
+        multiplier:1,
+        airportOrigin:false,
+        duration:"45 min aprox.",
+        note:"Referencia Murcia → ALC."
+      },
+      "rmu-murcia": {
+        label:"RMU → Murcia",
+        start:"Aeropuerto RMU",
+        end:"Murcia ciudad",
+        codes:["RMU","MUR"],
+        curve:"airportPickup",
+        multiplier:34.90 / 55,
+        minimum:34.90,
+        airportOrigin:true,
+        duration:"25 min aprox.",
+        note:"Base diurna RMU: 34,90€."
+      },
+      "murcia-rmu": {
+        label:"Murcia → RMU",
+        start:"Murcia ciudad",
+        end:"Aeropuerto RMU",
+        codes:["MUR","RMU"],
+        curve:"murciaPickup",
+        multiplier:34.90 / 55,
+        minimum:34.90,
+        airportOrigin:false,
+        duration:"25 min aprox.",
+        note:"Base diurna RMU: 34,90€."
+      },
+      "vlc-murcia": {
+        label:"Aeropuerto de Valencia → Murcia",
+        start:"Aeropuerto Valencia",
+        end:"Murcia ciudad",
+        codes:["VLC","MUR"],
+        curve:"airportPickup",
+        multiplier:169.90 / 55,
+        airportOrigin:true,
+        duration:"2 h 15 min aprox.",
+        note:"Base diurna VLC: 169,90€."
+      },
+      "murcia-vlc": {
+        label:"Murcia → Aeropuerto de Valencia",
+        start:"Murcia ciudad",
+        end:"Aeropuerto Valencia",
+        codes:["MUR","VLC"],
+        curve:"murciaPickup",
+        multiplier:169.90 / 55,
+        airportOrigin:false,
+        duration:"2 h 15 min aprox.",
+        note:"Base diurna VLC: 169,90€."
+      }
+    };
+
+    const routeByChoice = {
+      alc: {
+        "airport-to-murcia": "alc-murcia",
+        "murcia-to-airport": "murcia-alc"
+      },
+      rmu: {
+        "airport-to-murcia": "rmu-murcia",
+        "murcia-to-airport": "murcia-rmu"
+      },
+      vlc: {
+        "airport-to-murcia": "vlc-murcia",
+        "murcia-to-airport": "murcia-vlc"
+      }
+    };
+
+    const airportNames = {
+      alc: "Aeropuerto de Alicante",
+      rmu: "Aeropuerto Región de Murcia",
+      vlc: "Aeropuerto de Valencia"
+    };
+
+    function formatEuro(value){
+      const rounded = Math.round((value + Number.EPSILON) * 100) / 100;
+      return rounded.toFixed(2).replace(".", ",") + "€";
+    }
+
+    function timeToMinutes(value){
+      const [hours, minutes] = value.split(":").map(Number);
+      return hours * 60 + minutes;
+    }
+
+    function minutesToTime(minutes){
+      const normalized = (minutes + 1440) % 1440;
+      const hours = String(Math.floor(normalized / 60)).padStart(2, "0");
+      const mins = String(normalized % 60).padStart(2, "0");
+      return `${hours}:${mins}`;
+    }
+
+    function isInsideInterval(minutes, start, end){
+      const startMinutes = timeToMinutes(start);
+      const endMinutes = timeToMinutes(end);
+      if(startMinutes <= endMinutes) return minutes >= startMinutes && minutes <= endMinutes;
+      return minutes >= startMinutes || minutes <= endMinutes;
+    }
+
+    function findBasePrice(curveName, minutes){
+      const match = curves[curveName].find(([start, end]) => isInsideInterval(minutes, start, end));
+      return match ? match[2] : 55;
+    }
+
+    function roundEstimate(value){
+      const whole = Math.floor(value);
+      const ending = whole + .90;
+      return ending >= value ? ending : whole + 1.90;
+    }
+
+    function applyRouteMultiplier(basePrice, route){
+      if(route.multiplier === 1) return basePrice;
+      return roundEstimate(Math.max(basePrice * route.multiplier, route.minimum || 0));
+    }
+
+    function classifyFare(basePrice){
+      if(basePrice <= 55) return "Horario base";
+      if(basePrice < 95) return "Horario nocturno";
+      return "Madrugada";
+    }
+
+    function paxLabel(count){
+      if(!count) return "elige pasajeros";
+      return count === 1 ? "si viajas solo" : `si sois ${count}`;
+    }
+
+    function selectedAirport(){
+      return airport || "alc";
+    }
+
+    function selectedDirection(){
+      return direction || "airport-to-murcia";
+    }
+
+    function selectedRoute(){
+      return routes[routeByChoice[selectedAirport()][selectedDirection()]];
+    }
+
+    function revealStep(step){
+      formProgress = Math.max(formProgress, step);
+    }
+
+    function luggageSummary(){
+      const items = [];
+      if(luggage.backpacks > 0){
+        items.push(`${luggage.backpacks} mochila${luggage.backpacks === 1 ? "" : "s"}`);
+      }
+      if(luggage.cabin10 > 0){
+        items.push(`${luggage.cabin10} maleta${luggage.cabin10 === 1 ? "" : "s"} de cabina de 10 kg`);
+      }
+      if(luggage.checked20 > 0){
+        items.push(`${luggage.checked20} maleta${luggage.checked20 === 1 ? "" : "s"} facturada${luggage.checked20 === 1 ? "" : "s"} de 20 kg`);
+      }
+      return items.length ? items.join(" · ") : "Equipaje no indicado";
+    }
+
+    function hasRequiredQuoteData(){
+      return Boolean(
+        airport &&
+        direction &&
+        document.getElementById("timeInput").value &&
+        document.getElementById("dateInput").value &&
+        pax
+      );
+    }
+
+    function calculateFare(){
+      const route = selectedRoute();
+      const inputTime = document.getElementById("timeInput").value;
+      const date = document.getElementById("dateInput").value;
+      const pricingTime = inputTime || "12:00";
+      const landingMinutes = timeToMinutes(pricingTime);
+      const hasCheckedLuggage = luggage.checked20 > 0;
+      const pickupMinutes = route.airportOrigin ? landingMinutes + (hasCheckedLuggage ? 30 : 15) : landingMinutes;
+      const basePrice = findBasePrice(route.curve, pickupMinutes % 1440);
+      const total = applyRouteMultiplier(basePrice, route);
+
+      return {
+        route,
+        inputTime,
+        pickupTime: minutesToTime(pickupMinutes),
+        basePrice,
+        total,
+        perPerson: pax ? total / pax : null,
+        hasCheckedLuggage,
+        date
+      };
+    }
+
+    function updateWhatsApp(){
+      const fare = calculateFare();
+      const canRequest = hasRequiredQuoteData();
+      const flightNumber = document.getElementById("flightInput").value.trim();
+      const wantsShare = pax && pax < 4 && document.getElementById("shareSeats").checked;
+      const shareLine = pax && pax < 4
+        ? `Compartir plazas: ${wantsShare ? "sí, quiero intentar compartir las plazas libres" : "no, prefiero no publicar plazas libres por ahora"}. Plazas libres: ${4 - pax}.`
+        : "Compartir plazas: no aplica, coche completo.";
+      const directionText = fare.route.airportOrigin ? "Llego al aeropuerto y voy a Murcia" : "Salgo desde Murcia al aeropuerto";
+      const messageParts = [
+        "Hola Boltify, he calculado un transfer en la web y quiero pedir disponibilidad.",
+        "",
+        "Aeropuerto: " + airportNames[selectedAirport()],
+        "Tipo de traslado: " + directionText,
+        "Ruta: " + fare.route.label,
+        "Duración orientativa: " + fare.route.duration,
+        "Fecha: " + fare.date,
+        (fare.route.airportOrigin ? "Hora de aterrizaje: " : "Hora de recogida: ") + fare.inputTime,
+        fare.route.airportOrigin ? "Recogida estimada: " + fare.pickupTime : "Recogida: " + fare.pickupTime,
+        "Pasajeros: " + pax,
+        flightNumber ? "Número de vuelo: " + flightNumber : "",
+        "Nota de equipaje: " + luggageSummary(),
+        "Estimación web: " + formatEuro(fare.total) + " total" + (pax ? " / " + formatEuro(fare.perPerson) + " por persona" : ""),
+        shareLine,
+        "Reserva: el conductor me indicará por WhatsApp si hace falta dejar una pequeña señal y cómo pagar el resto el día del traslado.",
+        fare.route.airportOrigin ? "Retrasos: avisaría por WhatsApp cuanto antes si el vuelo cambia." : "Salida desde Murcia: quiero confirmar margen de llegada al aeropuerto.",
+        "Dirección exacta: la confirmo por WhatsApp.",
+        "",
+        "¿Puedes confirmarme disponibilidad y precio final?"
+      ].filter(Boolean);
+      const message = messageParts.join("\n");
+
+      document.querySelectorAll(".js-wa").forEach(link => {
+        link.href = canRequest ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}` : "#quote";
+        link.setAttribute("aria-disabled", String(!canRequest));
+      });
+    }
+
+    function updateFareView(){
+      const fare = calculateFare();
+      const formattedTotal = formatEuro(fare.total);
+      const formattedPerson = pax ? formatEuro(fare.perPerson) : "—";
+      const seatsLeft = pax ? 4 - pax : 0;
+      const fareState = classifyFare(fare.basePrice);
+      const hasTime = Boolean(document.getElementById("timeInput").value);
+      const canRequest = hasRequiredQuoteData();
+
+      document.querySelectorAll(".airport-option").forEach(button => {
+        const active = button.dataset.airport === airport;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+
+      document.querySelectorAll(".direction-option").forEach(button => {
+        const active = button.dataset.direction === direction;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+
+      document.querySelectorAll(".pax").forEach(button => {
+        const active = Number(button.dataset.pax) === pax;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+
+      document.querySelectorAll(".form-step").forEach(step => {
+        step.classList.toggle("is-hidden", Number(step.dataset.step) > formProgress);
+      });
+
+      document.querySelectorAll("[data-luggage]").forEach(button => {
+        const type = button.dataset.luggage;
+        const isMinus = Number(button.dataset.change) < 0;
+        button.disabled = isMinus && luggage[type] === 0;
+      });
+
+      document.getElementById("mainPrice").innerHTML = `${formattedTotal} <small>/ total estimado</small>`;
+      document.getElementById("totalPrice").textContent = formattedTotal;
+      document.getElementById("perPersonPrice").textContent = formattedPerson;
+      document.getElementById("heroPerPerson").textContent = formattedPerson;
+      document.getElementById("heroPriceLabel").textContent = pax ? `por persona ${paxLabel(pax)}` : "elige pasajeros";
+      document.getElementById("perPersonHint").textContent = paxLabel(pax);
+      document.getElementById("fareStateLabel").textContent = airport ? fareState : "Desde horario base";
+      document.getElementById("statusPrice").textContent = airport ? fareState : "Desde horario base";
+      document.getElementById("statusRoute").textContent = airport ? fare.route.label : "Murcia ⇄ aeropuerto";
+      document.getElementById("airportVisualLabel").textContent = "Aeropuerto";
+      document.getElementById("routeStartLabel").textContent = fare.route.start;
+      document.getElementById("routeEndLabel").textContent = fare.route.end;
+      document.getElementById("routeCodeStart").textContent = fare.route.codes[0];
+      document.getElementById("routeCodeEnd").textContent = fare.route.codes[1];
+      document.getElementById("backpacksCount").textContent = luggage.backpacks;
+      document.getElementById("cabin10Count").textContent = luggage.cabin10;
+      document.getElementById("checked20Count").textContent = luggage.checked20;
+      document.getElementById("timeLabel").textContent = fare.route.airportOrigin
+        ? "3. ¿A qué hora aterrizas?"
+        : "3. ¿A qué hora quieres que te recojan?";
+
+      const luggageText = !hasTime
+        ? "Elige la hora para afinar la recogida"
+        : fare.route.airportOrigin
+        ? `Recogida estimada ${fare.pickupTime}`
+        : `Recogida en Murcia a las ${fare.pickupTime}`;
+      document.getElementById("fareHelper").textContent = airport
+        ? `${airportNames[selectedAirport()]} · ${luggageText} · duración ${fare.route.duration} · precio orientativo.`
+        : "Elige el aeropuerto para empezar. Mostramos Alicante como referencia base.";
+      document.getElementById("quotePricebar").classList.toggle("is-hidden", !airport);
+      document.getElementById("fareHelper").classList.toggle("is-hidden", !airport);
+
+      document.getElementById("seatNote").innerHTML = seatsLeft > 0
+        ? `<strong>Quedan ${seatsLeft} plaza${seatsLeft === 1 ? "" : "s"} libre${seatsLeft === 1 ? "" : "s"}.</strong> Puedes enviar la solicitud igualmente. Con tu permiso, intentaremos avisar en grupos Erasmus de que hay plazas disponibles para completar el coche y bajar el precio por persona.`
+        : "<strong>Coche completo.</strong> El precio ya queda dividido entre 4 pasajeros.";
+      document.getElementById("seatNote").classList.toggle("is-hidden", formProgress < 4 || !pax);
+      document.getElementById("shareOption").classList.toggle("is-hidden", formProgress < 4 || !pax || pax >= 4);
+      if(!pax || pax >= 4) document.getElementById("shareSeats").checked = false;
+      document.getElementById("quoteActions").classList.toggle("is-hidden", !canRequest);
+
+      updateWhatsApp();
+      updateStickyButton();
+    }
+
+    function updateStickyButton(){
+      const sticky = document.querySelector(".sticky-wa");
+      const quotePanel = document.getElementById("quote");
+      const quoteRect = quotePanel.getBoundingClientRect();
+      const quoteInView = quoteRect.top < window.innerHeight - 80 && quoteRect.bottom > 140;
+      const quoteDockActive = Boolean(airport && quoteInView);
+      document.body.classList.toggle("quote-dock-active", quoteDockActive);
+      sticky.classList.toggle("visible", window.scrollY > 620 && !quoteDockActive);
+    }
+
+    function initializeDateInput(){
+      const input = document.getElementById("dateInput");
+      const today = new Date();
+      const offset = today.getTimezoneOffset();
+      const localToday = new Date(today.getTime() - offset * 60000).toISOString().slice(0, 10);
+      input.min = localToday;
+    }
+
+    document.querySelectorAll(".pax").forEach(button => {
+      button.addEventListener("click", () => {
+        pax = Number(button.dataset.pax);
+        revealStep(5);
+        updateFareView();
+      });
+    });
+
+    document.querySelectorAll(".airport-option").forEach(button => {
+      button.addEventListener("click", () => {
+        airport = button.dataset.airport;
+        revealStep(2);
+        updateFareView();
+      });
+    });
+
+    document.querySelectorAll(".direction-option").forEach(button => {
+      button.addEventListener("click", () => {
+        direction = button.dataset.direction;
+        revealStep(3);
+        updateFareView();
+      });
+    });
+
+    document.getElementById("timeInput").addEventListener("input", () => {
+      if(document.getElementById("timeInput").value) revealStep(4);
+      updateFareView();
+    });
+    document.getElementById("timeInput").addEventListener("change", () => {
+      if(document.getElementById("timeInput").value) revealStep(4);
+      updateFareView();
+    });
+    document.getElementById("dateInput").addEventListener("input", () => {
+      if(document.getElementById("dateInput").value) revealStep(6);
+      updateFareView();
+    });
+    document.getElementById("dateInput").addEventListener("change", () => {
+      if(document.getElementById("dateInput").value) revealStep(6);
+      updateFareView();
+    });
+    document.getElementById("dateInput").addEventListener("focus", () => {
+      updateFareView();
+    });
+    document.getElementById("flightInput").addEventListener("input", updateFareView);
+    document.getElementById("shareSeats").addEventListener("change", updateFareView);
+
+    document.querySelectorAll("[data-luggage]").forEach(button => {
+      button.addEventListener("click", () => {
+        const type = button.dataset.luggage;
+        const nextValue = luggage[type] + Number(button.dataset.change);
+        luggage[type] = Math.max(0, Math.min(9, nextValue));
+        revealStep(6);
+        updateFareView();
+      });
+    });
+
+    document.querySelectorAll(".faq-toggle").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isOpen = item.classList.toggle("open");
+        button.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
+
+    window.addEventListener("scroll", updateStickyButton, {passive:true});
+    window.addEventListener("resize", updateStickyButton, {passive:true});
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.14});
+
+    document.querySelectorAll(".reveal").forEach((element, index) => {
+      element.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
+      observer.observe(element);
+    });
+
+    initializeDateInput();
+    updateFareView();
+    updateStickyButton();
+  </script>
+</body>
+</html>
