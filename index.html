@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transfer Aeropuerto Alicante Murcia para Erasmus | Boltify</title>
-  <meta name="description" content="Transfer puerta a puerta entre Murcia y los aeropuertos de Alicante, Murcia y Valencia. Ideal para Erasmus: calcula precio, comparte plazas y confirma por WhatsApp." />
-  <meta property="og:title" content="Transfer Aeropuerto Alicante Murcia para Erasmus | Boltify" />
-  <meta property="og:description" content="Transfer puerta a puerta entre Murcia y los aeropuertos de Alicante, Murcia y Valencia. Ideal para Erasmus: calcula precio, comparte plazas y confirma por WhatsApp." />
+  <title>Transfers aeropuerto Murcia para Erasmus | Boltify</title>
+  <meta name="description" content="Transfers económicos entre Murcia y los aeropuertos de Alicante, Murcia y Valencia. Comparte plazas, calcula precio y confirma por WhatsApp." />
+  <meta property="og:title" content="Transfers aeropuerto Murcia para Erasmus | Boltify" />
+  <meta property="og:description" content="Transfers económicos entre Murcia y los aeropuertos de Alicante, Murcia y Valencia. Comparte plazas, calcula precio y confirma por WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
   <!-- TODO: añadir imagen 1200x630 para vista previa en WhatsApp.
        Ruta preparada cuando exista: <meta property="og:image" content="https://boltify.es/og-boltify.jpg" />
-       Contenido recomendado: Boltify · Transfer aeropuerto Alicante ⇄ Murcia · Para Erasmus · puerta a puerta · WhatsApp. -->
+       Contenido recomendado: Boltify · Transfers aeropuerto ⇄ Murcia · Para Erasmus · viaje compartido · WhatsApp. -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -127,7 +127,7 @@
       z-index:1;
     }
     .hero-copy{grid-area:copy;align-self:start;padding-top:34px}
-    .hero-support{grid-area:support;align-self:start}
+    .hero-support{grid-area:support;align-self:start;width:100%}
     .eyebrow{
       display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;
       padding:9px 12px;border:1px solid rgba(255,90,22,.25);border-radius:999px;
@@ -137,9 +137,8 @@
     h1{font-size:clamp(46px,6.2vw,82px);line-height:1;letter-spacing:0;max-width:720px;font-weight:950}
     .grad{background:linear-gradient(95deg,var(--blue),#36a5e8 35%,#f27b4b 68%,var(--orange));-webkit-background-clip:text;color:transparent}
     .lead{margin-top:22px;color:var(--muted);font-size:clamp(17px,1.55vw,20px);line-height:1.72;font-weight:560;max-width:590px}
-    .italian-note{margin-top:12px;color:#344151;font-size:15px;font-weight:850;line-height:1.5;max-width:560px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-    .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;max-width:650px}
+    .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;max-width:none}
     .trust-item{
       min-height:76px;padding:12px;border:1px solid rgba(16,23,34,.09);border-radius:var(--radius);
       background:rgba(255,255,255,.66);box-shadow:0 10px 24px rgba(16,23,34,.05);
@@ -425,7 +424,9 @@
     .ticker b{color:var(--yellow)}
     @keyframes ticker{to{transform:translateX(-50%)}}
 
-    section{padding:86px 0}
+    section{padding:76px 0}
+    #routes{padding-bottom:42px}
+    #how{padding-top:56px}
     .section-head{max-width:800px;margin:0 auto 40px;text-align:center}
     .section-head.left{text-align:left;margin-left:0}
     .chip{
@@ -447,7 +448,7 @@
     .conversion-card h3{font-size:31px;line-height:1.12;letter-spacing:0;margin-bottom:12px}
     .conversion-card p,.mini-proof p{color:var(--muted);font-weight:650;line-height:1.62}
     .microcopy{margin-top:16px;padding:12px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);color:#52606f;font-size:14px;font-weight:780;line-height:1.45}
-    .conversion-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+    .conversion-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}
     .conversion-point{padding:14px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
     .conversion-point b{display:block;color:var(--orange);font-size:21px;letter-spacing:0}
     .conversion-point span{display:block;margin-top:5px;color:#52606f;font-size:13px;font-weight:800;line-height:1.32}
@@ -503,7 +504,8 @@
     .quote{padding:22px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)}
     .quote p{color:rgba(255,255,255,.86);font-size:17px}
     .proof-action{position:relative;z-index:1;margin-top:24px;display:flex;justify-content:center}
-    .stars{color:var(--yellow);letter-spacing:0;margin-bottom:14px}
+    .stars{color:var(--yellow);letter-spacing:2px;margin-bottom:12px;font-size:18px}
+    .review-title{display:block;margin-bottom:9px;color:#fff;font-size:18px;font-weight:950;line-height:1.2}
     .person{margin-top:18px;color:rgba(255,255,255,.68);font-weight:900}
 
     .price-faq{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}
@@ -619,6 +621,7 @@
       .routes-grid,.conversion-grid,.price-faq,.cta{grid-template-columns:1fr}
       .booking-shell{aspect-ratio:16/9;min-height:0}
       .scene-svg{height:100%;min-height:0}
+      .hero-support{max-width:760px;margin-inline:auto}
       .trust-row{grid-template-columns:repeat(2,1fr)}
       .steps,.benefit-grid,.quote-grid{grid-template-columns:1fr}
       .nav-links{display:none}
@@ -674,7 +677,9 @@
       .route-big{grid-template-columns:1fr;gap:16px}
       .place:last-child{justify-content:flex-start;text-align:left}
       .route-dots{width:70%}
-      section{padding:62px 0}
+      section{padding:54px 0}
+      #routes{padding-bottom:32px}
+      #how{padding-top:38px}
       .proof,.cta,.route-feature,.price-box,.faq-box{padding:22px}
       .price{font-size:64px}
       .fare-grid,.fare-result{grid-template-columns:1fr}
@@ -709,12 +714,11 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow">Murcia ⇄ aeropuerto · puerta a puerta</div>
-          <h1>Transfer aeropuerto Alicante ⇄ Murcia <span class="grad">para Erasmus</span></h1>
+          <div class="eyebrow">Murcia ⇄ aeropuerto</div>
+          <h1>Transfers aeropuerto ⇄ Murcia <span class="grad">para Erasmus</span></h1>
           <p class="lead">
-            Viaja puerta a puerta, comparte plazas con otros estudiantes y confirma tu traslado por WhatsApp. Ideal para llegadas, salidas y vuelos que no encajan bien con el autobús.
+            Servicio económico con filosofía de viaje compartido: puerta a puerta, flexible y con conductor a tu servicio.
           </p>
-          <p class="italian-note">Arrivi a Murcia per l’Erasmus? Ti portiamo dall’aeroporto direttamente a casa.</p>
         </div>
 
         <div class="booking-shell reveal" aria-label="Animación del traslado Boltify">
@@ -732,7 +736,7 @@
               <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
                 <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#101722" flood-opacity=".18"/>
               </filter>
-              <path id="heroRoutePath" d="M 104 312 C 222 276, 318 304, 424 266 C 508 236, 586 234, 668 198" />
+              <path id="heroRoutePath" d="M 72 318 C 178 292, 286 308, 394 276 C 506 244, 604 230, 686 188" />
             </defs>
 
             <rect width="720" height="405" fill="url(#skyGradient)" />
@@ -751,21 +755,23 @@
               <text x="59" y="150" text-anchor="middle" fill="#364250" font-size="19" font-weight="900">Murcia</text>
             </g>
 
-            <g transform="translate(514 104)" filter="url(#softShadow)">
-              <rect x="-26" y="142" width="220" height="18" rx="9" fill="#101722" opacity=".9" />
-              <rect x="16" y="72" width="154" height="76" rx="8" fill="#ffffff" />
-              <path d="M4 74 H184 L156 44 H34 Z" fill="#ffede0" />
-              <rect x="34" y="96" width="32" height="24" rx="4" fill="#dff1ff" />
-              <rect x="78" y="96" width="32" height="24" rx="4" fill="#dff1ff" />
-              <rect x="122" y="92" width="30" height="56" rx="5" fill="#ff5a16" opacity=".92" />
-              <rect x="34" y="128" width="82" height="20" rx="5" fill="#147fd1" opacity=".9" />
-              <circle cx="94" cy="38" r="35" fill="#ffffff" />
-              <path d="M68 43 L118 26 C124 24 128 29 122 33 L104 46 L110 62 L101 66 L90 52 L74 61 L70 55 L83 45 L67 47 Z" fill="#ff5a16" />
-              <text id="airportVisualLabel" x="94" y="194" text-anchor="middle" fill="#364250" font-size="19" font-weight="900">Aeropuerto</text>
+            <g transform="translate(492 92)" filter="url(#softShadow)">
+              <rect x="-6" y="154" width="232" height="18" rx="9" fill="#101722" opacity=".88" />
+              <rect x="24" y="86" width="150" height="72" rx="9" fill="#ffffff" />
+              <rect x="42" y="106" width="34" height="24" rx="4" fill="#dff1ff" />
+              <rect x="88" y="106" width="34" height="24" rx="4" fill="#dff1ff" />
+              <rect x="134" y="82" width="30" height="76" rx="5" fill="#ff5a16" opacity=".94" />
+              <rect x="40" y="136" width="94" height="22" rx="5" fill="#147fd1" opacity=".9" />
+              <rect x="180" y="66" width="26" height="92" rx="7" fill="#ffffff" />
+              <rect x="185" y="78" width="16" height="42" rx="3" fill="#dff1ff" />
+              <circle cx="104" cy="42" r="36" fill="#ffffff" />
+              <path d="M77 47 L130 28 C137 26 141 32 134 36 L114 50 L121 67 L111 71 L99 56 L82 66 L77 59 L91 49 L76 51 Z" fill="#ff5a16" />
+              <path d="M80 47 L130 29" fill="none" stroke="#147fd1" stroke-width="5" stroke-linecap="round" opacity=".35" />
+              <text id="airportVisualLabel" x="104" y="202" text-anchor="middle" fill="#364250" font-size="19" font-weight="900">Aeropuerto</text>
             </g>
 
-            <path d="M 104 312 C 222 276, 318 304, 424 266 C 508 236, 586 234, 668 198" fill="none" stroke="#fff8f2" stroke-width="16" stroke-linecap="round" opacity=".78" />
-            <path class="route-dash" d="M 104 312 C 222 276, 318 304, 424 266 C 508 236, 586 234, 668 198" fill="none" stroke="#ff5a16" stroke-width="6" stroke-linecap="round" />
+            <path d="M 72 318 C 178 292, 286 308, 394 276 C 506 244, 604 230, 686 188" fill="none" stroke="#fff8f2" stroke-width="16" stroke-linecap="round" opacity=".78" />
+            <path class="route-dash" d="M 72 318 C 178 292, 286 308, 394 276 C 506 244, 604 230, 686 188" fill="none" stroke="#ff5a16" stroke-width="6" stroke-linecap="round" />
 
             <g transform="translate(188 292)" filter="url(#softShadow)">
               <rect x="0" y="12" width="32" height="43" rx="7" fill="#ff5a16" />
@@ -801,14 +807,14 @@
 
         <div class="booking-panel reveal" id="quote" aria-label="Calculadora de precio Boltify">
           <div class="booking-head">
-            <span class="chip">Solicitud guiada</span>
+            <span class="chip">Servicio económico 24/7</span>
             <h2>Calcula el precio de tu traslado</h2>
-            <p>El precio se calcula según aeropuerto, sentido, hora y pasajeros. El equipaje ayuda a confirmar capacidad y tiempos de recogida.</p>
+            <p>El precio varía según aeropuerto y hora de recogida. Cuantas más personas te acompañen, más económico será para ti.</p>
           </div>
 
           <div class="quote-flow">
             <section class="form-step" data-step="1">
-              <div class="step-kicker"><span>1. Elige el aeropuerto</span><small>Precio base visible al momento</small></div>
+              <div class="step-kicker"><span>1. Elige el aeropuerto</span><small>El precio se actualizará solo</small></div>
               <div class="airport-choice" role="group" aria-label="Aeropuerto vinculado">
                 <button class="airport-option" data-airport="alc" type="button">
                   <strong>ALC</strong>
@@ -874,7 +880,7 @@
               </div>
               <label class="share-option is-hidden" id="shareOption">
                 <input id="shareSeats" type="checkbox" />
-                <span>Quiero que intentéis compartir las plazas libres con otros Erasmus. Nunca se publicará mi dirección exacta ni mis datos personales.</span>
+                <span>Quiero que intentéis compartir las plazas libres en grupos Erasmus. Las personas interesadas podrán escribirme y yo decidiré si las acepto.</span>
               </label>
             </section>
 
@@ -946,10 +952,10 @@
             <a class="btn btn-secondary" href="#how">Ver cómo funciona</a>
           </div>
           <div class="trust-row" aria-label="Ventajas principales">
-            <div class="trust-item"><b>Compartir plazas</b><span>Intentamos completar el coche con otros Erasmus si tú quieres.</span></div>
-            <div class="trust-item"><b>Puerta a puerta</b><span>Te recogemos o dejamos en tu dirección, sin cargar maletas por Murcia.</span></div>
-            <div class="trust-item"><b>Más directo</b><span>Una alternativa cómoda cuando el bus no encaja con tu vuelo.</span></div>
-            <div class="trust-item"><b>Reseñas reales</b><span>Valoraciones de clientes que ya han viajado con Boltify.</span></div>
+            <div class="trust-item"><b>Cuantos + vengan, mejor</b><span>Intentamos completar el coche para que te salga más barato.</span></div>
+            <div class="trust-item"><b>Llega hasta casa</b><span>Te recogemos o dejamos lo más cerca posible de tu piso sin coste adicional.</span></div>
+            <div class="trust-item"><b>Di adiós 👋 al bus</b><span>Olvídate de tener que caminar, esperar o perder el autobús.</span></div>
+            <div class="trust-item"><b>De confianza</b><span>Te esperamos si el vuelo se retrasa y avisas a tiempo.</span></div>
           </div>
         </div>
       </div>
@@ -965,25 +971,23 @@
     <section id="routes">
       <div class="container">
         <div class="section-head reveal">
-          <div class="chip">Comunidad Erasmus</div>
-          <h2>Pensado para estudiantes Erasmus que llegan o salen de Murcia.</h2>
-          <p>Si vienes solo, con compañeros de vuelo o con gente del piso, Boltify te ayuda a calcular el traslado y, si quedan plazas libres, a intentar compartir el viaje con otros Erasmus.</p>
+          <div class="chip">El favorito de los Erasmus</div>
+          <h2>Pensado para estudiantes que llegan o salen de Murcia.</h2>
+          <p>Una alternativa al bus económica y popular entre Erasmus de Murcia.</p>
         </div>
         <div class="conversion-grid">
           <article class="conversion-card reveal">
-            <h3>¿Viajas solo y quieres compartir el traslado?</h3>
-            <p>Si hay plazas libres, podemos avisar en grupos Erasmus para intentar encontrar otros estudiantes con una ruta compatible. Tú decides si quieres compartir o viajar de forma privada.</p>
+            <h3>No viajes solo</h3>
+            <p>Publicamos tu viaje en los grupos Erasmus para llenar el resto de plazas y ahorrarte costes.</p>
             <div class="conversion-points">
-              <div class="conversion-point"><b>Compartir</b><span>Avisamos en grupos Erasmus con tu permiso</span></div>
-              <div class="conversion-point"><b>Sin caminata</b><span>Del aeropuerto a tu puerta, no solo hasta la estación</span></div>
-              <div class="conversion-point"><b>Conductor</b><span>Reserva web y dudas directas por WhatsApp</span></div>
+              <div class="conversion-point"><b>Tú decides quién viene</b><span>Las personas interesadas te escribirán a ti y tú decidirás si las aceptas o no.</span></div>
+              <div class="conversion-point"><b>Y eliges el lugar de encuentro...</b><span>La persona que reserva elige la dirección de destino / llegada en Murcia.</span></div>
             </div>
-            <p class="microcopy">Nunca compartimos tu dirección exacta ni tus datos personales. Solo avisamos de la ruta aproximada, fecha, hora y plazas disponibles.</p>
           </article>
           <aside class="mini-proof reveal">
-            <strong>Reserva clara, conversación directa.</strong>
-            <p>La solicitud llega al conductor con ruta, hora, pasajeros y equipaje. Después confirmas disponibilidad, precio final y dudas por WhatsApp.</p>
-            <a class="btn btn-primary" href="#quote">Calcular mi traslado</a>
+            <strong>Reserva a través de la web</strong>
+            <p>Y resuelve dudas en WhatsApp directamente con el conductor al momento de la solicitud.</p>
+            <a class="btn btn-primary" href="#quote">Hacer solicitud ahora</a>
           </aside>
         </div>
       </div>
@@ -1062,25 +1066,28 @@
       <div class="container">
         <div class="proof reveal">
           <div class="section-head left">
-            <div class="chip">Prueba social</div>
-            <h2>Erasmus que ya han viajado con Boltify.</h2>
-            <p>Traslados reales entre Murcia y el aeropuerto, con trato directo por WhatsApp y reseñas verificables en Google.</p>
+            <div class="chip">Reseñas en Google</div>
+            <h2>Lo que suelen destacar quienes viajan con Boltify.</h2>
+            <p>Traslados entre Murcia y el aeropuerto con trato directo, recogida cómoda y opiniones que puedes comprobar en Google.</p>
           </div>
           <div class="quote-grid">
             <article class="quote">
-              <div class="stars">Google Maps</div>
-              <p>Consulta las reseñas reales de clientes que ya han usado Boltify para ir o volver del aeropuerto.</p>
-              <div class="person">Opiniones verificables</div>
+              <div class="stars">★★★★★</div>
+              <strong class="review-title">Puntualidad y trato cercano</strong>
+              <p>Recogida clara, conversación directa por WhatsApp y un traslado fácil cuando llegas cargado al aeropuerto.</p>
+              <div class="person">Resumen de reseñas reales</div>
             </article>
             <article class="quote">
-              <div class="stars">Comunidad Erasmus</div>
-              <p>Servicio pensado para estudiantes que llegan a Murcia, vuelven a casa o buscan compartir traslado con otros compañeros.</p>
-              <div class="person">Llegadas y salidas</div>
+              <div class="stars">★★★★★</div>
+              <strong class="review-title">Puerta a puerta</strong>
+              <p>Sin cruzar Murcia con maletas ni depender de combinaciones: del aeropuerto a casa o de casa al aeropuerto.</p>
+              <div class="person">Comodidad para Erasmus</div>
             </article>
             <article class="quote">
-              <div class="stars">WhatsApp directo</div>
-              <p>La solicitud llega ordenada al conductor: aeropuerto, hora, pasajeros, equipaje y plazas libres si queréis compartir.</p>
-              <div class="person">Sin mensajes eternos</div>
+              <div class="stars">★★★★★</div>
+              <strong class="review-title">Ideal para compartir</strong>
+              <p>Si quedan plazas libres, se intenta completar el coche con otros Erasmus para bajar el coste por persona.</p>
+              <div class="person">Viaje compartido</div>
             </article>
           </div>
           <div class="proof-action">
@@ -1149,8 +1156,8 @@
               <p>Sí. Boltify cuenta con reseñas reales de cinco estrellas en <a href="https://maps.app.goo.gl/gK6Mz6JLpgPkce297?g_st=ic" target="_blank" rel="noopener">Google Maps</a> de clientes que han usado el servicio para ir al aeropuerto.</p>
             </article>
             <article class="faq-item">
-              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Publicáis mis datos si quiero compartir plazas?</span><span class="faq-icon">+</span></button>
-              <p>No. Si quieres intentar compartir el coche, solo se publica información básica del trayecto: aeropuerto, fecha, hora aproximada y plazas libres. Nunca se publica tu dirección exacta ni datos personales.</p>
+              <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Qué se publica si quiero compartir plazas?</span><span class="faq-icon">+</span></button>
+              <p>Se publica la ruta, fecha, hora aproximada, plazas libres y un contacto para que las personas interesadas puedan escribirte. Tú decides si las aceptas o prefieres mantener el traslado privado.</p>
             </article>
             <article class="faq-item">
               <button class="faq-toggle" type="button" aria-expanded="false"><span class="faq-question">¿Puedo reservar si todavía no sé la dirección exacta?</span><span class="faq-icon">+</span></button>
